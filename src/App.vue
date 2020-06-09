@@ -2,22 +2,7 @@
   <div id="app">
     
     <Grid
-      :name="'SQI-Dev'"
-      :title="'SQI-DataGrid-Develop [0.1.0-Dev]'"
-      :urlDataUser="''"
-      :urlDataList="''"
-      :dataUser="{}"
-      :dataList="{}"
-      :dataParams="{}"
-      :primaryColor="'#bb0a1e'"
-      :secondaryColor="'#8B0000'"
-      :showFoot="true"
-      :rowMultipleSelect="true"
-      :numberRowsByPages="10"
-      :searchable="true"
-      :dblClickEditable="true"
-      :mouseRowHover="'#F0F0F0'"
-      :insertDirection="1"
+  
     />
   </div>
 </template>
