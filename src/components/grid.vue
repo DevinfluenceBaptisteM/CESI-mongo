@@ -341,6 +341,8 @@ export default {
     }, // permet d’ouvrir directement sur une page
     //CF https://docs.google.com/document/d/16EwPL4hWeBM1jrRUky4_iTt460diAe6uQaemwYMdoes/edit pour les dernières props à mettre en place
   },
+
+  
   data: function() {
     return {
       dataList: [
