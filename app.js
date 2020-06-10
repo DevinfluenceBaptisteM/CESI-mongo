@@ -11,7 +11,7 @@ client.connect(async err => {
     console.log(tweets)
     client.close();
 });
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.render('index.html');
 });
 app.listen(8070, '127.0.0.1')
