@@ -2,13 +2,13 @@ var express = require('express');
 var app = express();
 app.engine('html', require('ejs').renderFile);
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://Baptiste:azerty@data-3laxu.gcp.mongodb.net/DATA?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Antoine:azerty@data-3laxu.gcp.mongodb.net/DATA?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err => {
+client.connect(async err => {
     const collection = client.db("sample_training").collection("tweets");
-    collection.findOne({}, function (err, result) {
-        console.log(result)
-    });
+    
+    let tweets = await collection.find({source : "web"}).sort({id: -1}).toArray()
+    console.log(tweets)
     client.close();
 });
 app.get('/', function (req, res) {
